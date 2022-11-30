@@ -2,6 +2,7 @@ package com.example.admin_demo;
 
 import com.example.admin_demo.dao.UserDao;
 import com.example.admin_demo.entity.User;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -45,5 +46,20 @@ public class AdminDemoApplication {
         if(user.getUsername() ==null|| user.getPassword()==null)
             throw new RuntimeException("参数错误");
         userDao.insert(user);
+    }
+
+    //更新
+    @PutMapping("/update")
+    public String updateUser(@RequestBody User user){
+        userDao.update(user);
+        return "sucess!";
+    }
+
+
+    //删除
+    @DeleteMapping("/delete/{id}")
+    public String deleteUserById(@PathVariable Integer id){
+        userDao.deleteById(id);
+        return "sucess!";
     }
 }

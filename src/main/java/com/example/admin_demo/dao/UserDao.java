@@ -17,4 +17,8 @@ public interface UserDao  {
 
     //insert 接口返回一个数字,不能返回User对象
     int insert(User user);
+
+    void update(User user);
+
+    int deleteById(Integer id);
 }

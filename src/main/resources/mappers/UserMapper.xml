@@ -7,6 +7,16 @@
         INSERT INTO `user`(username,password) VALUES (#{username},#{password})
     </insert>
 
+<!--    更新-->
+    <update id="update">
+        UPDATE `user` set PASSWORD =#{password} , username =#{username} where id=#{id}
+    </update>
+    <delete id="deleteById">
+
+        DELETE from `user` where id = #{id};
+
+    </delete>
+    <!--查找-->
     <select id="findAll" resultType="com.example.admin_demo.entity.User">
         SELECT *from `user`
     </select>
