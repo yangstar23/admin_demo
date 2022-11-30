@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.admin_demo.dao.UserDao">
+    <insert id="insert">
+        INSERT INTO `user`(username,password) VALUES (#{username},#{password})
+    </insert>
+
+    <select id="findAll" resultType="com.example.admin_demo.entity.User">
+        SELECT *from `user`
+    </select>
+
+
+    <select id="getById" resultType="com.example.admin_demo.entity.User">
+        SELECT * FROM `user` WHERE id =#{id}
+    </select>
+
+    <select id="getByUser" resultType="com.example.admin_demo.entity.User">
+        SELECT * FROM `user` WHERE username=#{username} and password=#{password}
+    </select>
+</mapper>
