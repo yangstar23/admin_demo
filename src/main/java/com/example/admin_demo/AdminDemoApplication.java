@@ -41,6 +41,7 @@ public class AdminDemoApplication {
         return userDao.getByUser(username,password);
     }
 
+    /*新增*/
     @PostMapping("/add")
     public void save(@RequestBody User user){
         if(user.getUsername() ==null|| user.getPassword()==null)
