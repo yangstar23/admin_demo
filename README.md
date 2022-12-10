@@ -54,7 +54,7 @@ public User hello(@PathVariable String msg){
 
 **@PathVarible**用来接收输入
 
-![image-20221129175207979](/Users/yangstar/Library/Application Support/typora-user-images/image-20221129175207979.png)
+<img src="/Users/yangstar/Library/Application Support/typora-user-images/image-20221129175207979.png" alt="image-20221129175207979" style="zoom:33%;" />
 
 
 
@@ -296,7 +296,7 @@ va.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'yjx' for key '
 
 ![image-20221130100850558](/Users/yangstar/Library/Application Support/typora-user-images/image-20221130100850558.png)
 
-![image-20221130100902529](/Users/yangstar/Library/Application Support/typora-user-images/image-20221130100902529.png)
+![image-20221130100902529](https://raw.githubusercontent.com/yangstar23/picgo/main/img/image-20221130100902529.png)
 
 ![image-20221130100930723](/Users/yangstar/Library/Application Support/typora-user-images/image-20221130100930723.png)
 
